@@ -11,6 +11,11 @@
         @font-face{ font-family: "DMSans-Bold"; src: url(./fonts/DMSans-Bold.ttf);}
         * {
             box-sizing: border-box;
+    
+        }
+
+        html{
+            scroll-behavior: smooth;
         }
 
         body {
@@ -29,13 +34,14 @@
             padding: 0;
             margin: 0;
         }
+        
 
-        .fixed p i {
+        section .fixed p i {
             height: 12px;
             width: 12px;
         }
 
-        .fixed h1{
+        section .fixed h1{
 
             color: #c77d21;
             font-family: 'DMSans-Bold';
@@ -47,7 +53,7 @@
             position: absolute;
             width: 100%;
             height: 100vh;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
             overflow: hidden;
             clip: rect(0, auto, auto, 0);
         }
@@ -57,10 +63,20 @@
             position: fixed;
             top: 50%;
             left: 50%;
+            width: 80%;
         }
 
         .section .white {
             color: #fff;
+        }
+
+        .large{
+            font-size: 60px;
+            color: #c77d21;
+            font-family: 'DMSans-Bold';
+            font-size: 60px;
+            letter-spacing: 0px;
+            text-transform: none;
         }
 
         .section:nth-child(1) {
@@ -68,12 +84,26 @@
             color: #000;
             top: 0;
             z-index: 1;
+           
+    
         }
 
+       
         .section:nth-child(1) .fixed {
             transform: translate(-50%, -50%);
         }
 
+        .section:nth-child(1) .fixed p {
+            font-size: 60px;
+            -webkit-text-fill-color: #fff;
+            -webkit-text-stroke: 2px black; 
+            font-family: 'DMSans-Bold';
+            font-size: 60px;
+            letter-spacing: 0px;
+            text-transform: none;
+        }
+
+        
         .section:nth-child(2) {
             box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.14);
             background-color: #1a1a1a;
@@ -157,12 +187,18 @@
         .section:nth-child(8) .fixed {
             transform: translate(-50%, -50%);
         }
+        .prueba{
+            color: red;
+            
+        }
     </style>
 </head>
 
 <body>
     <div class="section">
+       
         <div class="fixed">
+            
             <h1 class="large">Casos de discriminación</h1>
             <p>por etapas en la vía penal de 2004 al 2022</p>
         </div>
@@ -218,6 +254,11 @@
                     icon.classList.add("fa", "fa-user");
                     icon.setAttribute("aria-hidden", "true");
                     targetElement.appendChild(icon);
+                    
+                    if(quantity > 500){
+                        // targetElement.style.cssText = "width: 100% !important;"
+                        targetElement.className = 'prueba'
+                    }
                 }
             });
         }
@@ -228,6 +269,10 @@
             return document.getElementById(`container${index + 1}`);
         });
         createIcons(quantities, targetElements);
+
+        
+
+
     </script>
 </body>
 

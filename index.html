@@ -187,8 +187,12 @@
         .section:nth-child(8) .fixed {
             transform: translate(-50%, -50%);
         }
+
+        .section-title{
+            color: #c77d21;
+        }
         .prueba{
-            color: red;
+            color: white;
             
         }
     </style>
@@ -205,43 +209,43 @@
     </div>
     <div class="section">
         <div class="fixed">
-            <h1>Sin Etapa</h1>
+            <h1 class="section-title">Sin Etapa</h1>
             <p id="container1"></p>
         </div>
     </div>
     <div class="section">
         <div class="fixed">
-            <h1>Investigación Preventiva</h1>
+            <h1 class="section-title">Investigación Preventiva</h1>
             <p id="container2"></p>
         </div>
     </div>
     <div class="section">
         <div class="fixed">
-            <h1>Calificación</h1>
+            <h1 class="section-title">Calificación</h1>
             <p id="container3"></p>
         </div>
     </div>
     <div class="section">
         <div class="fixed">
-            <h1>Etapa Intermedia</h1>
+            <h1 class="section-title">Etapa Intermedia</h1>
             <p id="container4"></p>
         </div>
     </div>
     <div class="section">
         <div class="fixed">
-            <h1>Etapa de Juzgamiento</h1>
+            <h1 class="section-title">Etapa de Juzgamiento</h1>
             <p id="container5"></p>
         </div>
     </div>
     <div class="section">
         <div class="fixed">
-            <h1>Apelación</h1>
+            <h1 class="section-title">Apelación</h1>
             <p id="container6"></p>
         </div>
     </div>
     <div class="section">
         <div class="fixed">
-            <h1>Sentencias Firmes</h1>
+            <h1 class="section-title">Sentencias Firmes</h1>
             <p id="container7"></p>
         </div>
     </div>
@@ -256,22 +260,30 @@
                     targetElement.appendChild(icon);
                     
                     if(quantity > 500){
-                        // targetElement.style.cssText = "width: 100% !important;"
+                        // targetElement.style.cssText = "width: 100%"
                         targetElement.className = 'prueba'
                     }
                 }
             });
         }
 
+
+      
         const quantities = [4687, 3192, 2787, 199, 90, 43, 25];
         const quantities2 = quantities.map((quantity) => quantity / 10)
         const targetElements = quantities.map((quantity, index) => {
             return document.getElementById(`container${index + 1}`);
         });
-        createIcons(quantities, targetElements);
+
+        if (window.innerWidth <= 768) {
+            
+            createIcons(quantities2, targetElements)
+        }else{
+            ;
+            createIcons(quantities, targetElements);
+        }
 
         
-
 
     </script>
 </body>

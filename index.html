@@ -28,6 +28,13 @@
             text-transform: uppercase;
             color: #000;
         }
+        /* Fondo para portada */
+        div.section:first-child{
+            background: url('./images/Portada.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 120%;
+        }
 
         header {
             background-color: #fff;
@@ -40,7 +47,7 @@
             height: 12px;
             width: 12px;
         }
-
+        /* Color para los titulos de sección */
         section .fixed h1{
 
             color: #c77d21;
@@ -69,7 +76,7 @@
         .section .white {
             color: #fff;
         }
-
+        /* Color para título principal */
         .large{
             font-size: 60px;
             color: #c77d21;
@@ -77,6 +84,7 @@
             font-size: 60px;
             letter-spacing: 0px;
             text-transform: none;
+            text-shadow: 5px 4px 5px #000000;
         }
 
         .section:nth-child(1) {
@@ -84,29 +92,25 @@
             color: #000;
             top: 0;
             z-index: 1;
-           
-    
         }
-
-       
         .section:nth-child(1) .fixed {
             transform: translate(-50%, -50%);
         }
 
         .section:nth-child(1) .fixed p {
             font-size: 60px;
-            -webkit-text-fill-color: #fff;
-            -webkit-text-stroke: 2px black; 
+            color: white; 
             font-family: 'DMSans-Bold';
             font-size: 60px;
             letter-spacing: 0px;
             text-transform: none;
+            text-shadow: 5px 4px 5px #000000;
         }
 
         
         .section:nth-child(2) {
             box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.14);
-            background-color: #1a1a1a;
+            background-image: url('./images/bg-parallax.jpg');
             color: #fff;
             top: 100vh;
             z-index: 2;
@@ -118,7 +122,7 @@
 
         .section:nth-child(3) {
             box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.14);
-            background-color: #333333;
+            background-image: url('./images/bg-parallax.jpg');
             color: #fff;
             top: 200vh;
             z-index: 3;
@@ -130,7 +134,7 @@
 
         .section:nth-child(4) {
             box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.14);
-            background-color: #4d4d4d;
+            background-image: url('./images/bg-parallax.jpg');
             color: #fff;
             top: 300vh;
             z-index: 4;
@@ -142,7 +146,7 @@
 
         .section:nth-child(5) {
             box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.14);
-            background-color: #666666;
+            background-image: url('./images/bg-parallax.jpg');
             color: #fff;
             top: 400vh;
             z-index: 5;
@@ -154,7 +158,7 @@
 
         .section:nth-child(6) {
             box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.14);
-            background-color: gray;
+            background-image: url('./images/bg-parallax.jpg');
             color: #fff;
             top: 500vh;
             z-index: 6;
@@ -166,7 +170,7 @@
 
         .section:nth-child(7) {
             box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.14);
-            background-color: #999999;
+            background-image: url('./images/bg-parallax.jpg');
             color: #fff;
             top: 600vh;
             z-index: 7;
@@ -178,7 +182,7 @@
 
         .section:nth-child(8) {
             box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.14);
-            background-color: #b3b3b3;
+            background-image: url('./images/bg-parallax.jpg');
             color: #fff;
             top: 700vh;
             z-index: 8;

@@ -209,17 +209,50 @@
         .section-title {
             color: #c77d21;
         }
-
-        .prueba {
+        /* clase que modifica  */
+        .elemento {
             color: white;
             display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 5px 4px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 5px 4px;
+
+        }
+        /* barra lateral*/
+        .vertical-bar {
+            position: absolute;
+            top: 25%;
+            left: 2;
+            height: 50%;
+            width: 10px;
+            margin-left: 21px;
+            
+            /* Ancho de la barra vertical */
+        }
+
+
+        
+        .bar-section {
+            height: 50%;
+            border-radius: 10px;
+        }
+
+        .section-1 {
+            background-color: #fff;
+        }
+
+        .section-2 {
+            background-color: #c77d21;
 
         }
 
+        /* barra lateral*/
+
+
+
+
+        /* media querie for responsive */
         @media only screen and (max-width: 800px) {
             .section {
                 letter-spacing: 1px;
@@ -291,20 +324,16 @@
 
             .section i {
                 padding-right: 4px;
-    padding-top: 3px;
-    
-            }
+                padding-top: 3px;
 
-            /* .fa{
-                line-height: 1;
-                display: var(--fa-display,inline-block);
-            } */
+            }
 
         }
     </style>
 </head>
 
 <body>
+
     <div class="section">
 
         <div class="fixed">
@@ -314,43 +343,78 @@
         </div>
     </div>
     <div class="section">
+        <div class="vertical-bar">
+            <div class="bar-section section-1"></div>
+            <div class="bar-section section-2"></div>
+        </div>
         <div class="fixed">
+            
             <h1 class="section-title">Sin Etapa: 4687 casos</h1>
             <p id="container1"></p>
         </div>
     </div>
     <div class="section">
+        <div class="vertical-bar">
+            <div class="bar-section section-1"></div>
+            <div class="bar-section section-2"></div>
+        </div>
         <div class="fixed">
+            
             <h1 class="section-title">Investigación Preventiva: 3192 casos</h1>
             <p id="container2"></p>
         </div>
     </div>
     <div class="section">
+        <div class="vertical-bar">
+            <div class="bar-section section-1"></div>
+            <div class="bar-section section-2"></div>
+        </div>
         <div class="fixed">
+            
             <h1 class="section-title">Calificación: 2787 casos</h1>
             <p id="container3"></p>
         </div>
     </div>
     <div class="section">
+        <div class="vertical-bar">
+            <div class="bar-section section-1"></div>
+            <div class="bar-section section-2"></div>
+        </div>
         <div class="fixed">
+           
             <h1 class="section-title">Etapa Intermedia: 199 casos</h1>
             <p id="container4"></p>
         </div>
     </div>
     <div class="section">
+        <div class="vertical-bar">
+            <div class="bar-section section-1"></div>
+            <div class="bar-section section-2"></div>
+        </div>
         <div class="fixed">
+            
             <h1 class="section-title">Etapa de Juzgamiento: 90 casos</h1>
             <p id="container5"></p>
         </div>
     </div>
     <div class="section">
+        <div class="vertical-bar">
+            <div class="bar-section section-1"></div>
+            <div class="bar-section section-2"></div>
+        </div>
         <div class="fixed">
+            
             <h1 class="section-title">Apelación: 43 casos</h1>
             <p id="container6"></p>
         </div>
     </div>
     <div class="section">
+        <div class="vertical-bar">
+            <div class="bar-section section-1"></div>
+            <div class="bar-section section-2"></div>
+        </div>
         <div class="fixed">
+            
             <h1 class="section-title">Sentencias Firmes: 25 casos</h1>
             <p id="container7"></p>
         </div>
@@ -367,7 +431,7 @@
 
                     if (quantity > 500) {
                         // targetElement.style.cssText = "width: 100%"
-                        targetElement.className = 'prueba'
+                        targetElement.className = 'elemento'
                     }
                 }
             });

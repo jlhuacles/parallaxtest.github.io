@@ -15,6 +15,11 @@
             src: url(./fonts/DMSans-Bold.ttf);
         }
 
+        @font-face {
+            font-family: "DMSans-Medium";
+            src: url(./fonts/DMSans-Medium.ttf);
+        }
+
         * {
             box-sizing: border-box;
 
@@ -81,7 +86,7 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            width: 90%;
+            width: 80%;
         }
 
         .section .white {
@@ -206,9 +211,22 @@
             transform: translate(-50%, -50%);
         }
 
+        .section:nth-child(9) {
+            box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.14);
+            background-image: url('./images/bg-parallax.jpg');
+            color: #fff;
+            top: 800vh;
+            z-index: 9;
+        }
+
+        .section:nth-child(9) .fixed {
+            transform: translate(-50%, -50%);
+        }
+
         .section-title {
             color: #c77d21;
         }
+
         /* clase que modifica  */
         .elemento {
             color: white;
@@ -219,6 +237,7 @@
             gap: 5px 5px;
 
         }
+
         /* barra lateral*/
         .vertical-bar {
             position: fixed;
@@ -228,12 +247,12 @@
             width: 10px;
             margin-left: 21px;
             z-index: 20;
-            
+
             /* Ancho de la barra vertical */
         }
 
 
-        
+
         .bar-section {
             height: 50%;
             border-radius: 0.5px;
@@ -244,10 +263,31 @@
         }
 
         .section-2 {
-            
+
             border: 1px solid #c77d21;
 
         }
+
+        .text-left {
+                position: absolute;
+                top: 25%;
+                left: 30px;
+                margin: 0;
+                color: #c77d21;
+                font-size: 12px;
+                font-family: 'DMSans-Medium';
+            }
+
+            .text-right {
+                position: absolute;
+                top: 75%;
+                left: 30px;
+                margin: 0;
+                color: #c77d21;
+                font-size: 12px;
+                font-family: 'DMSans-Medium';
+            }
+
 
         /* barra lateral*/
 
@@ -331,33 +371,36 @@
             }
 
             .vertical-bar {
-            position: absolute;
-            display: flex;
-            bottom: 0;
-            left: 0;
-            height: 10px;
-            width: 90%;
+                position: absolute;
+                display: flex;
+                bottom: 0;
+                left: 0;
+                height: 10px;
+                width: 90%;
+
+                z-index: 20;
+
+                /* Ancho de la barra vertical */
+            }
+
+            .bar-section {
+                height: 50%;
+                border-radius: 0.5px;
+            }
+
+            .section-1 {
+                flex: 1;
+                border: 1px solid #c77d21;
+            }
+
+            .section-2 {
+                flex: 1;
+                background-color: #c77d21;
+
+            }
+
+
            
-            z-index: 20;
-            
-            /* Ancho de la barra vertical */
-        }
-        .bar-section {
-            height: 50%;
-            border-radius: 0.5px;
-        }
-
-        .section-1 {
-            flex: 1;
-            border: 1px solid #c77d21;
-        }
-
-        .section-2 {
-            flex: 1;
-            background-color: #c77d21;
-
-        }
-
         }
     </style>
 </head>
@@ -384,9 +427,11 @@
         <div class="vertical-bar">
             <div class="bar-section section-1"></div>
             <div class="bar-section section-2"></div>
+            <p class="text-left">ETAPA FISCAL</p>
+            <p class="text-right">ETAPA JUDICIAL</p>
         </div>
         <div class="fixed">
-            
+
             <h1 class="section-title">Sin Etapa: 4687 casos</h1>
             <p id="container1"></p>
         </div>
@@ -395,9 +440,11 @@
         <div class="vertical-bar">
             <div class="bar-section section-1"></div>
             <div class="bar-section section-2"></div>
+            <p class="text-left">ETAPA FISCAL</p>
+            <p class="text-right">ETAPA JUDICIAL</p>
         </div>
         <div class="fixed">
-            
+
             <h1 class="section-title">Investigación Preventiva: 3192 casos</h1>
             <p id="container2"></p>
         </div>
@@ -406,20 +453,25 @@
         <div class="vertical-bar">
             <div class="bar-section section-1"></div>
             <div class="bar-section section-2"></div>
+            <p class="text-left">ETAPA FISCAL</p>
+            <p class="text-right">ETAPA JUDICIAL</p>
         </div>
         <div class="fixed">
-            
+
             <h1 class="section-title">Calificación: 2787 casos</h1>
             <p id="container3"></p>
         </div>
     </div>
     <div class="section">
         <div class="vertical-bar">
-            <div class="bar-section section-1"></div>
             <div class="bar-section section-2"></div>
+            <div class="bar-section section-1"></div>
+            <p class="text-left">ETAPA FISCAL</p>
+            <p class="text-right">ETAPA JUDICIAL</p>
+
         </div>
         <div class="fixed">
-           
+
             <h1 class="section-title">Etapa Intermedia: 199 casos</h1>
             <p id="container4"></p>
         </div>
@@ -428,10 +480,12 @@
         <div class="vertical-bar">
             <div class="bar-section section-2"></div>
             <div class="bar-section section-1"></div>
-           
+            <p class="text-left">ETAPA FISCAL</p>
+            <p class="text-right">ETAPA JUDICIAL</p>
+
         </div>
         <div class="fixed">
-            
+
             <h1 class="section-title">Etapa de Juzgamiento: 90 casos</h1>
             <p id="container5"></p>
         </div>
@@ -440,10 +494,12 @@
         <div class="vertical-bar">
             <div class="bar-section section-2"></div>
             <div class="bar-section section-1"></div>
-            
+            <p class="text-left">ETAPA FISCAL</p>
+            <p class="text-right">ETAPA JUDICIAL</p>
+
         </div>
         <div class="fixed">
-            
+
             <h1 class="section-title">Apelación: 43 casos</h1>
             <p id="container6"></p>
         </div>
@@ -452,10 +508,12 @@
         <div class="vertical-bar">
             <div class="bar-section section-2"></div>
             <div class="bar-section section-1"></div>
-            
+            <p class="text-left">ETAPA FISCAL</p>
+            <p class="text-right">ETAPA JUDICIAL</p>
+
         </div>
         <div class="fixed">
-            
+
             <h1 class="section-title">Sentencias Firmes: 25 casos</h1>
             <p id="container7"></p>
         </div>

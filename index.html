@@ -525,9 +525,11 @@
 
         blockquote {
             position: relative;
-            left: 50%;
-            transform: translateX(-50%);
             margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
         blockquote p::before {
@@ -610,6 +612,19 @@
 
         }
 
+        .comments4 {
+
+            opacity: 0.9;
+            line-height: 26px;
+            text-align: right;
+            padding: 24px 16px;
+            border-radius: 2px;
+            font-size: 1.5em;
+            font-style: italic;
+            max-width: 75%;
+
+        }
+
         blockquote p.comments4 {
             background:
                 linear-gradient(to right, #fe0404 4px, transparent 4px) 0 100%,
@@ -621,24 +636,34 @@
         }
 
 
+      
 
         .animated-border-quote {
+            position: relative;
             display: inline-block;
-            margin: 1em;
+
             max-width: 75%;
             overflow: hidden;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.9;
+            line-height: 26px;
+            border-radius: 2px;
+            font-size: 1.5em;
+            font-style: italic;
+
         }
 
-        blockquote .animated-border-quote {
+        .animated-border-quote blockquote {
             background-color: #fff;
-            border: solid 2px #757575;
+            border: solid 2px #fe0404;
             display: inline-block;
             margin: 0;
-            padding: 1em;
+            padding: 24px 10px;
             position: relative;
         }
 
-        blockquote .animated-border-quote:before {
+        .animated-border-quote blockquote:before {
             animation: clockwise 30s infinite linear;
             background-color: #fff;
             bottom: 10%;
@@ -650,7 +675,7 @@
             top: 10%;
         }
 
-        blockquote .animated-border-quote:after {
+        .animated-border-quote blockquote:after {
             animation: counter 30s infinite linear;
             background-color: #fff;
             bottom: 10%;
@@ -662,7 +687,17 @@
             top: 10%;
         }
 
-        blockquote>* .animated-border-quote {
+        .animated-border-quote blockquote cite {
+            display: block;
+            font-style: italic;
+            text-align: right;
+        }
+
+        .animated-border-quote blockquote cite:before {
+            content: "- ";
+        }
+
+        .animated-border-quote blockquote>* {
             position: relative;
             z-index: 1;
         }
@@ -1127,15 +1162,16 @@
                     <span>‘no, eso no existe'</span>
                 </p>
             </blockquote>
+            <div class="animated-border-quote">
+                <blockquote>
 
-            <blockquote>
-                <div class="animated-border-quote">
-                <p class="comments5">Vi mucha incredulidad. Pedías al abogado que te pueda llevar el proceso
-                    y te decían
-                    <span>‘no, eso no existe'</span>
-                </p>
-                </div>
-            </blockquote>
+                    <p class="comments5">Vi mucha incredulidad. Pedías al abogado que te pueda llevar el proceso
+                        y te decían
+                        <span>‘no, eso no existe'</span>
+                    </p>
+
+                </blockquote>
+            </div>
 
             <p>El abogado Oré puntualiza que al desconocimiento de los letrados en el tema se suma el
                 de los propios operadores de justicia. “Por ejemplo, en el caso de discriminación étnico-racial, existe
